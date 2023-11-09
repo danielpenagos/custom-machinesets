@@ -1,0 +1,206 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/GPU: '0'
+    machine.openshift.io/memoryMb: '8192'
+    machine.openshift.io/vCPU: '4'
+  resourceVersion: '36391'
+  name: aro-dpenagos-6n4g8-worker-eastus1
+  uid: e4f0b346-f249-49c8-9570-67a74e82cfa7
+  creationTimestamp: '2023-11-09T04:06:21Z'
+  generation: 1
+  namespace: openshift-machine-api
+  labels:
+    machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+      machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus1
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus1
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          osDisk:
+            diskSettings: {}
+            diskSizeGB: 256
+            managedDisk:
+              storageAccountType: Premium_LRS
+            osType: Linux
+          networkResourceGroup: dpenagos-blob
+          publicLoadBalancer: aro-dpenagos-6n4g8
+          userDataSecret:
+            name: worker-user-data
+          vnet: aro-dpenagos-aro-vnet-eastus
+          credentialsSecret:
+            name: azure-cloud-credentials
+            namespace: openshift-machine-api
+          diagnostics: {}
+          zone: '1'
+          metadata:
+            creationTimestamp: null
+          publicIP: false
+          resourceGroup: aro-blob-rg
+          kind: AzureMachineProviderSpec
+          location: eastus
+          vmSize: Standard_F4s_v2
+          image:
+            offer: aro4
+            publisher: azureopenshift
+            resourceID: ''
+            sku: aro_412
+            version: 412.86.20230503
+          acceleratedNetworking: true
+          subnet: aro-dpenagos-aro-machine-subnet-eastus
+          apiVersion: machine.openshift.io/v1beta1
+
+---
+
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/GPU: '0'
+    machine.openshift.io/memoryMb: '8192'
+    machine.openshift.io/vCPU: '4'
+  resourceVersion: '39112'
+  name: aro-dpenagos-6n4g8-worker-eastus2
+  uid: c7e17f53-b32a-4570-baf2-0171356bf29b
+  creationTimestamp: '2023-11-09T04:06:22Z'
+  generation: 1
+  namespace: openshift-machine-api
+  labels:
+    machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+      machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus2
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus2
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          osDisk:
+            diskSettings: {}
+            diskSizeGB: 256
+            managedDisk:
+              storageAccountType: Premium_LRS
+            osType: Linux
+          networkResourceGroup: dpenagos-blob
+          publicLoadBalancer: aro-dpenagos-6n4g8
+          userDataSecret:
+            name: worker-user-data
+          vnet: aro-dpenagos-aro-vnet-eastus
+          credentialsSecret:
+            name: azure-cloud-credentials
+            namespace: openshift-machine-api
+          diagnostics: {}
+          zone: '2'
+          metadata:
+            creationTimestamp: null
+          publicIP: false
+          resourceGroup: aro-blob-rg
+          kind: AzureMachineProviderSpec
+          location: eastus
+          vmSize: Standard_F4s_v2
+          image:
+            offer: aro4
+            publisher: azureopenshift
+            resourceID: ''
+            sku: aro_412
+            version: 412.86.20230503
+          acceleratedNetworking: true
+          subnet: aro-dpenagos-aro-machine-subnet-eastus
+          apiVersion: machine.openshift.io/v1beta1
+
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/GPU: '0'
+    machine.openshift.io/memoryMb: '8192'
+    machine.openshift.io/vCPU: '4'
+  resourceVersion: '36427'
+  name: aro-dpenagos-6n4g8-worker-eastus3
+  uid: 7d12dc92-35f6-46e7-93bd-f2cc08c3010a
+  creationTimestamp: '2023-11-09T04:06:21Z'
+  generation: 1
+  namespace: openshift-machine-api
+  labels:
+    machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+      machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus3
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: aro-dpenagos-6n4g8
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: aro-dpenagos-6n4g8-worker-eastus3
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          osDisk:
+            diskSettings: {}
+            diskSizeGB: 256
+            managedDisk:
+              storageAccountType: Premium_LRS
+            osType: Linux
+          networkResourceGroup: dpenagos-blob
+          publicLoadBalancer: aro-dpenagos-6n4g8
+          userDataSecret:
+            name: worker-user-data
+          vnet: aro-dpenagos-aro-vnet-eastus
+          credentialsSecret:
+            name: azure-cloud-credentials
+            namespace: openshift-machine-api
+          diagnostics: {}
+          zone: '3'
+          metadata:
+            creationTimestamp: null
+          publicIP: false
+          resourceGroup: aro-blob-rg
+          kind: AzureMachineProviderSpec
+          location: eastus
+          vmSize: Standard_F4s_v2
+          image:
+            offer: aro4
+            publisher: azureopenshift
+            resourceID: ''
+            sku: aro_412
+            version: 412.86.20230503
+          acceleratedNetworking: true
+          subnet: aro-dpenagos-aro-machine-subnet-eastus
+          apiVersion: machine.openshift.io/v1beta1
